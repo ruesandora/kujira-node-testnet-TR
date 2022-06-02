@@ -129,6 +129,7 @@ systemctl status kujirad.service
 ```
 
 # Cüzdan oluşturuyoruz:
+Örnek: kujirad keys add rues
 ```
 kujirad keys add
 ```
