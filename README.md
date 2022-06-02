@@ -87,28 +87,25 @@ Sync olması için ulaşmanız gereken blok sayısı burada https://testnets.cos
 curl http://localhost:26657/status | jq .result.sync_info.catching_up
 ```
 
-# node'umuzun sürekli çalışabilir olması için servis dosyamızı oluşturuyoruz.
+# Servis dosyasını oluşturalım: 
 ```
-/etc/systemd/system/kujirad.service
-```
-
-# Oluşturduğumuz servis dosyasının içindeyken içine aşşağıdaki komutları yapıştırıyoruz. ctrl o deyip enter'a basıp kaydettikten sonra ctrl x ile çıkıyoruz.
-```
-[Unit]
-Description=Kujira Daemon
+echo "[Unit]
+Description=Kujirad Node
 After=network.target
 
 [Service]
+User=$USER
 Type=simple
-User=root
-ExecStart=/root/go/bin/kujirad --log_level error
-Restart=on-abort
+ExecStart=$(which kujirad) start
+Restart=on-failure
+LimitNOFILE=65535
 
 [Install]
-WantedBy=multi-user.target
-
-[Service]
-LimitNOFILE=65535
+WantedBy=multi-user.target" > $HOME/kujirad.service
+sudo mv $HOME/kujirad.service /etc/systemd/system
+sudo tee <<EOF >/dev/null /etc/systemd/journald.conf
+Storage=persistent
+EOF
 ```
 
 # Systemctl tekrar yüklüyoruz.
