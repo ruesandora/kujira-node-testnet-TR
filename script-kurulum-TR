@@ -14,8 +14,6 @@ source $HOME/.bash_profile
 kujirad keys add <cüzdan-ismi>
 curl -X POST https://faucet.kujira.app/<cüzdan-adresi>
 
-------------------------------------------------------------------------------------------------------------
-
 journalctl -u kujirad -f -o cat
 CTRL + A + D ile ana ekrana geçebilirsiniz.
 ```
@@ -34,6 +32,7 @@ kujirad tx staking create-validator \
 --from=wallet \
 --yes \
 ```
+
 
 ## Yararlı Komutlar:
 ```
@@ -54,5 +53,5 @@ kujirad query staking validators --limit 2000 -o json | jq -r '.validators[] | s
 ```
 
 
-
+Teşekkürler..
 
