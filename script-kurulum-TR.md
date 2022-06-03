@@ -18,6 +18,9 @@ journalctl -u kujirad -f -o cat
 CTRL + A + D ile ana ekrana geçebilirsiniz.
 ```
 ## Validator oluşturma:
+
+--from=wallet / komutunda, wallet kısmında kendi wallet oluştururken yazdığımız ismi giriyoruz.
+
 ```
 kujirad tx staking create-validator \
 --moniker="$KUJIRAD_NODENAME" \
