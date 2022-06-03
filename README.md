@@ -3,7 +3,7 @@
 # Sistem gereksinimlerimiz:
 ```
 4 cpu
-8 gb ram
+4 gb ram
 200gb ssd
 ```
 
