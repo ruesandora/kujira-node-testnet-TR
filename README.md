@@ -1,5 +1,7 @@
 ###    Selamlar herkese, bugün Kujira Network'ün (scriptsiz) node testine katılacağız, keyifli okumalar dilerim.
 
+Kujira Türkiye telegram kanalı: https://t.me/KujiraTurkish
+
 # Sistem gereksinimlerimiz:
 ```
 4 cpu
