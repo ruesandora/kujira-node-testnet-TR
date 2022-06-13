@@ -27,7 +27,7 @@ kujirad tx staking create-validator \
 --amount=10000000ukuji \
 --gas-prices=1ukuji \
 --pubkey=$(kujirad tendermint show-validator) \
---chain-id=harpoon-3 \
+--chain-id=harpoon-4 \
 --commission-max-change-rate=0.01 \
 --commission-max-rate=0.20 \
 --commission-rate=0.10 \
